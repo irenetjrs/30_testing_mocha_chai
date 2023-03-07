@@ -27,11 +27,18 @@ describe('validateEmail', function(){
       assert.isFalse(validateEmail('@emailgmail.com'), '@ the first character')
       });
    })
-   
+
    // task 2
 
    describe('validateEmail', function(){
    it('less than 5', function(){
          assert.isFalse(validateEmail('emailgmail.com'), false);
+      })
+   })
+
+   // task 3
+   describe('validateEmail', function(){
+      it('more than one @', function(){
+         assert.isFalse(validateEmail('email@@gmail.com'), false);
       })
    })

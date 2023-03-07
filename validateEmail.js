@@ -17,5 +17,8 @@ function validateEmail(email){
    if (checkLength.length > 5){
    return false
    }
+   if(checkCharacters.indexOf('@') !== checkCharacters.lastIndexOf('@')){
+   return false;
+   }
    return true
 }
