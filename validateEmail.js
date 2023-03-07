@@ -20,5 +20,11 @@ function validateEmail(email){
    if(checkCharacters.indexOf('@') !== checkCharacters.lastIndexOf('@')){
    return false;
    }
+   if(checkCharacters.indexOf('.') > checkCharacters.indexOf('@')){
+      return false;
+   }
+   if(checkCharacters.includes('.@')){
+      return false;
+   }
    return true
 }

@@ -37,8 +37,20 @@ describe('validateEmail', function(){
    })
 
    // task 3
+
    describe('validateEmail', function(){
       it('more than one @', function(){
          assert.isFalse(validateEmail('email@@gmail.com'), false);
+      })
+   })
+
+   // task 4
+
+   describe('validateEmail', function(){
+      it('dot before @', function(){
+         assert.isFalse(validateEmail('e.mail@gmail.com'), false);
+      })
+      it('dot right before @', function(){
+         assert.isFalse(validateEmail('e.mail.@gmail.com'), false);
       })
    })
